@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var agenda = []
+        var resp;
+        do{
+            resp = prompt("1-cadastar \n 2-buscar \n 3-sair");
+            if(resp == 1){
+                var nome = prompt('Insira o seu nome: ');
+                var telefone = prompt('Insira o seu telefone: ');
+                agenda.push(nome, telefone);
+            } else if(resp == 2){
+                const busca = prompt('digite o nome para buscar: ');
+                agenda.forEach(item => {
+                    if(item.nome.includes(busca)){
+                        alert(`Nome é ${nome} e telefone é ${telefone}`);
+                    }
+                });
+            }
+        } while(resp =! 3)
+    </script>
+</body>
+</html>
